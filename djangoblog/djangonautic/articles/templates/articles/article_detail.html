@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="article-detail">
+    <div class="article">
+        <h2>{{ article.title }}</h2>
+        <img src="{{ article.thumb.url }}">
+        <p>{{ article.body }}</p>
+        <p>Published On: {{ article.date }}</p>
+    </div>
+    {% ifequal user article.author  %}
+    <form class="site-form delete-form" method="POST" action="{% url 'articles:article-delete' article.id %}">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+    {% endifequal %}
+</div>
+{% endblock %}

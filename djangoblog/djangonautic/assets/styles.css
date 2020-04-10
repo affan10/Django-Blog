@@ -1,0 +1,239 @@
+body{
+    background-color: #0f121f;
+    background-image: url(moon.jpg);
+    background-repeat: no-repeat;
+    background-repeat-y: no-repeat;
+    color: #fff;
+}
+
+body *{
+    font-family: Ubuntu;
+}
+
+nav {
+    justify-self: end;
+}
+
+nav li {
+    margin-top: 12px;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a:visited, a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.highlight {
+    border: 1px solid #00dba0;
+    padding: 10px;
+    border-radius: 7px;
+    color: #00dba0;
+    font-size: 0.9em;
+}
+
+a.highlight:hover {
+    background: #00dba0;
+    color: #0f121f;
+    transition-delay: 0.3s;
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+div.wrapper h1 {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 2.4em;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+}
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.article {
+    padding: 10px;
+    border: 1px solid #00dba0;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.article img {
+    max-width: 100%;
+}
+
+.article h2 {
+    font-size: 1.3em;
+    padding-top: 5px;
+}
+
+.article h2 a {
+    color: #00dba0;
+}
+
+.article p {
+    font-size: 0.9em;
+    padding-top: 10px;
+}
+
+.article .author {
+    padding: 10px;
+    background: #00dba0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: #0f121f
+}
+
+.article-detail .article {
+    padding: 0;
+    border: none;
+}
+
+.article-detail .article img {
+    max-width: 100%;
+}
+
+.article-detail .article h2 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em;
+}
+
+.article-detail .article p {
+    text-align: left;
+    padding: 10px;
+}
+
+.site-form {
+    margin-top: 60px;
+    border: 1px solid #00dba0;
+    padding: 20px;
+}
+
+.site-form input, .site-form textarea {
+    display: block;
+    margin: 20px 0 0 0;
+    padding: 10px;
+}
+
+.helptext, .helptext ul {
+    margin: 0 auto 20px;
+    color: #bbb;
+    font-size: 0.9em;
+    display: block;
+}
+
+.errorlist-delete {
+    /* Logout button in navbar*/
+    border: 1px solid #ff5722;
+    color:#ff5722;
+    background: none;
+    margin: 0px 0;
+    font-size: 0.9em;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+.errorlist-delete:hover {
+    color: #0f121f;
+    background: #ff5722;
+    transition-delay: 0.3s;
+}
+
+.site-form input[type="submit"] {
+    border: 1px solid #00dba0;
+    padding: 10px;
+    border-radius: 7px;
+    color: #00dba0;
+    background: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.site-form input[type="submit"]:hover {
+    background: #00dba0;
+    color: #0f121f;
+    transition-delay: 0.3s;
+}
+
+/* These forms encapsulate Delete buttons */
+.site-form.delete-form {
+    border: 1px solid #ff5722;
+}
+
+.delete-form input[type="submit"]:hover {
+    background: #ff5722;
+    color: #0f121f;
+    transition-delay: 0.3s;
+}
+
+.delete-form p {
+    font-size: 1.2em;
+}
+
+/* Delete button on Article Delete form */
+.delete-form input[type="submit"] {
+    border: 1px solid #ff5722;
+    color:#ff5722;
+    background: none;
+    margin: 0px 0;
+    font-size: 0.9em;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+/* Back button on Delete Confirmation page */
+.back-button {
+    border: 1px solid #00dba0;
+    padding: 10px;
+    border-radius: 7px;
+    color: #00dba0;
+    font-size: 0.9em;
+    background: none;
+}
+
+.back-button:hover {
+    background: #00dba0;
+    color: #0f121f;
+    transition-delay: 0.3s;
+    text-decoration: none;
+}
+
+.upper-footer {
+    padding: 20px;
+    background: #0e1111;
+
+}
+
+.footer-copyright {
+    background: black;
+    color: #00dba0;
+}
+
+.footer-headings {
+    color: #00dba0;
+    padding-bottom: 10px;
+}
+
+/* Image in footer */
+.img-div {
+    padding: 4% 0 0 4%;
+}

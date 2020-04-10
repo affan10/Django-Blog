@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="article-create">
+    <h2>Update Your Article</h2>
+    <form class="site-form" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+<!-- enctype always required for upload fields.
+action="{% url 'articles:article-create' %}"-->
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+</div>
+<script src="/static/slugify.js"></script>
+{% endblock %}

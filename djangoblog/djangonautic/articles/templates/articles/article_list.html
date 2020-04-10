@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome To Djangonautic!</h1>
+<div class="articles">
+    {% for article in articles %}
+    <div class="article">
+        <a href="{% url 'articles:article-detail' slug=article.slug %}"><img src="{{ article.thumb.url }}"></a>
+        <h2><a href="{% url 'articles:article-detail' slug=article.slug %}"> {{ article.title }} </a></h2>
+        <p>{{ article.snippet }}</p>
+        <p>{{ article.date }}</p>
+        <p class="author">Added By: {{ article.author }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
