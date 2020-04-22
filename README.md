@@ -15,7 +15,7 @@ Additional functionality includes:
 - Only the user whose the author of the blog can update or delete it
 - Improved styling
 
-After adding these features, I added Django REST APIs support as well as a search bar to the blog. The APIs were added by taking inspiration from Coding With Mitch's and Parwiz Forogh's Django REST Framework tutorial, albeit my implementation was a little different. Through the APIs, the following operations are supported:
+After adding these features, I added Django REST APIs support as well as a search bar to the blog. The APIs were added by taking inspiration from Coding With Mitch's and Parwiz Forogh's Django REST Framework tutorials, albeit my implementation was a little different. Through the APIs, the following operations are supported:
 - Signup a new user
 - Login an existing user
 - Token Authentication
