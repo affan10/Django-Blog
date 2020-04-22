@@ -26,6 +26,10 @@ urlpatterns = [
     path('articles/', include('articles.urls')),
     path('accounts/', include('accounts.urls')),
     path('', article_list, name='home'),
+
+    # REST FRAMEWORK URLs
+    path('api/articles/', include('articles.api.urls', 'articles_api')),
+    path('api/accounts/', include('accounts.api.urls', 'account_signup_api')),
 ]
 
 # Add this after adding STATIC_URL and STAIC_DIRS in settings.py

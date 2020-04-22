@@ -1,6 +1,6 @@
 body{
     background-color: #0f121f;
-    background-image: url(moon.jpg);
+    background-image: url(fern.jpg);
     background-repeat: no-repeat;
     background-repeat-y: no-repeat;
     color: #fff;
@@ -41,7 +41,10 @@ a.highlight {
 a.highlight:hover {
     background: #00dba0;
     color: #0f121f;
-    transition-delay: 0.3s;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
     text-decoration: none;
 }
 
@@ -122,6 +125,11 @@ header {
     padding: 10px;
 }
 
+.article-create p {
+    font-size: 0.9em;
+    padding-top: 15px;
+}
+
 .site-form {
     margin-top: 60px;
     border: 1px solid #00dba0;
@@ -155,7 +163,10 @@ header {
 .errorlist-delete:hover {
     color: #0f121f;
     background: #ff5722;
-    transition-delay: 0.3s;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
 }
 
 .site-form input[type="submit"] {
@@ -171,7 +182,10 @@ header {
 .site-form input[type="submit"]:hover {
     background: #00dba0;
     color: #0f121f;
-    transition-delay: 0.3s;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
 }
 
 /* These forms encapsulate Delete buttons */
@@ -182,7 +196,10 @@ header {
 .delete-form input[type="submit"]:hover {
     background: #ff5722;
     color: #0f121f;
-    transition-delay: 0.3s;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
 }
 
 .delete-form p {
@@ -213,7 +230,10 @@ header {
 .back-button:hover {
     background: #00dba0;
     color: #0f121f;
-    transition-delay: 0.3s;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
     text-decoration: none;
 }
 
@@ -235,5 +255,34 @@ header {
 
 /* Image in footer */
 .img-div {
-    padding: 4% 0 0 4%;
+    padding: 9% 0 0 5%;
+}
+
+/* Search bar */
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+  border: 1px solid #00dba0;
+    box-shadow: 0 0 0 1px #00dba0;
+  background: none;
+  color: #fff;
+}
+.active-cyan-3 input[type=text] {
+  border: 1px solid #00dba0;
+  background: none;
+  color: #fff;
+}
+
+.active-cyan-3 input[type=text]:hover {
+    box-shadow: 0 0 0 1px #00dba0;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #fff;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  color: #fff;
+}
+
+::placeholder {
+  color: #fff;
 }

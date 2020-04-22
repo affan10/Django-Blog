@@ -4,6 +4,7 @@ from django.contrib.auth import login, logout
 
 # Create your views here.
 
+
 def signup_view(request):
     context = {}
     if request.method == 'POST':
@@ -17,6 +18,7 @@ def signup_view(request):
     context['form'] = form
     return render(request, 'accounts/signup.html', context)
 
+
 def login_view(request):
     context = {}
     if request.method == 'POST':
@@ -24,6 +26,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            # Check to redirect the user back to the page they were coming from
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
             else:
@@ -32,6 +35,7 @@ def login_view(request):
         form = AuthenticationForm()
     context['form'] = form
     return render(request, 'accounts/login.html', context)
+
 
 def logout_view(request):
     if request.method == 'POST':

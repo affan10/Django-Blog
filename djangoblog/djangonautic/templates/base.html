@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Articles</title>
+    <title>Djangonautic!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap-4.4.1-dist/css/bootstrap.min.css' %}"/>
@@ -30,6 +30,11 @@
                 <li><a href="{% url 'accounts:login' %}" class="highlight">Login</a></li>
                 <li><a href="{% url 'accounts:signup' %}" class="highlight">Signup</a></li>
                 {% endif %}
+                <form class="form-inline my-2 my-lg-0 search-form" action="{% url 'articles:search-results' %}" method="GET">
+                <div class="active-cyan-3 active-cyan-4 mb-4">
+                    <input class="form-control" type="text" placeholder="Search..." name="q">
+                </div>
+                </form>
             </ul>
         </nav>
     </header>
@@ -47,16 +52,25 @@
                 <hr class="clearfix w-100 d-md-none pb-3">
                 <div class="col-md-6 mb-md-0 mb-3">
                     <h5 class="footer-headings">Motivation For Djangonautic</h5>
-                    <p> This blog was developed as a practice for understanding Python's Django Web Framework. The blog
-                        was built and designed via The Net Ninja's Django Blog tutorial. After completing his tutorial,
-                        I added more functionality to it and improved the blog's overall User Experience.
+                    <p> Initially, this blog was developed as a practice for understanding Python's Django Web Framework.
+                        The blog was built and designed via The Net Ninja's Django Blog tutorial. After completion,
+                        I added more functionality to it, improved the design as well as the blog's overall
+                        User Experience.
+                    </p>
+                    <h5 class="footer-headings">Added Django REST Support</h5>
+                    <p> The blog also has API support implemented through the Django REST framework. The API support
+                        was added by taking inspiration from Coding With Mitch and Parwiz Forough's Django REST tutorials.
                     </p>
                 </div>
                 <hr class="clearfix w-100 d-md-none pb-3">
                 <div class="col-md-2 mb-md-0 mb-3">
                     <h5 class="footer-headings">Link To Tutorial</h5>
-                    <a href="https://www.youtube.com/watch?v=n-FTlQ7Djqc&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc">The Net Ninja</a>
-                    <p>Python 3.6.9 - Django 3.0.5</p>
+                    <p><a href="https://www.youtube.com/watch?v=n-FTlQ7Djqc&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc">The Net Ninja</a></p>
+                    <p><a href="https://www.youtube.com/playlist?list=PLgCYzUzKIBE9Pi8wtx8g55fExDAPXBsbV">Coding With Mitch</a></p>
+                    <br>
+                    <p>Python 3.6.9</p>
+                    <p>Django 3.0.5</p>
+                    <p>Django REST 3.11.0</p>
                 </div>
             </div>
         </div>
