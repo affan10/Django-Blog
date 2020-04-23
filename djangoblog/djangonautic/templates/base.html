@@ -11,33 +11,33 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <header class="wrapper">
-        <h1>
-            <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}"></a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}" class="highlight">Home</a></li>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'articles:article-create' %}" class="highlight">New Post</a></li>
-                <li><a href="{% url 'articles:article-list-of-author' userid=user.id %}" class="highlight">Update Posts</a></li>
-                <li>
-                    <form class="logout-link" method="POST" action="{% url 'accounts:logout' %}"> {% csrf_token %}
-                        <button type="submit" class="errorlist-delete">Logout</button>
-                    </form>
-                </li>
-                {% else %}
-                <li><a href="{% url 'accounts:login' %}" class="highlight">Login</a></li>
-                <li><a href="{% url 'accounts:signup' %}" class="highlight">Signup</a></li>
-                {% endif %}
-                <form class="form-inline my-2 my-lg-0 search-form" action="{% url 'articles:search-results' %}" method="GET">
-                <div class="active-cyan-3 active-cyan-4 mb-4">
-                    <input class="form-control" type="text" placeholder="Search..." name="q">
-                </div>
+    <nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'logo.png' %}"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'articles:article-create' %}" class="highlight">New Post</a></li>
+            <li><a href="{% url 'articles:article-list-of-author' userid=user.id %}" class="highlight">Update Posts</a></li>
+            <li>
+                <form class="logout-link" method="POST" action="{% url 'accounts:logout' %}"> {% csrf_token %}
+                    <button type="submit" class="errorlist-delete logout">Logout</button>
                 </form>
-            </ul>
-        </nav>
-    </header>
+            </li>
+            {% else %}
+            <li><a href="{% url 'accounts:login' %}" class="highlight">Login</a></li>
+            <li><a href="{% url 'accounts:signup' %}" class="highlight">Signup</a></li>
+            {% endif %}
+
+            <form class="form-inline my-2 my-lg-0 search-form" action="{% url 'articles:search-results' %}" method="GET">
+            <div class="active-cyan-3 active-cyan-4 mb-4">
+                <input class="form-control" type="text" placeholder="Search..." name="q" onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+            </div>
+            </form>
+        </ul>
+    </div>
+    </nav>
     <div class="wrapper">
     {% block content %}
     {% endblock %}
@@ -64,12 +64,12 @@
                 </div>
                 <hr class="clearfix w-100 d-md-none pb-3">
                 <div class="col-md-2 mb-md-0 mb-3">
-                    <h5 class="footer-headings">Link To Tutorial</h5>
+                    <h5 class="footer-headings">Link To Tutorials</h5>
                     <p><a href="https://www.youtube.com/watch?v=n-FTlQ7Djqc&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc">The Net Ninja</a></p>
                     <p><a href="https://www.youtube.com/playlist?list=PLgCYzUzKIBE9Pi8wtx8g55fExDAPXBsbV">Coding With Mitch</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=B38aDwUpcFc&t=4496s">Parwiz Forogh Django REST</a></p>
                     <br>
-                    <p>Python 3.6.9</p>
-                    <p>Django 3.0.5</p>
+                    <p>Python 3.6.9 - Django 3.0.5</p>
                     <p>Django REST 3.11.0</p>
                 </div>
             </div>

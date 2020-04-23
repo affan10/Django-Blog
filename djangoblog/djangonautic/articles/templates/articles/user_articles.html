@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% if articles %}
 <h1>Your Articles</h1>
 <div class="articles">
     {% for article in articles %}
@@ -15,4 +16,7 @@
     </div>
     {% endfor %}
 </div>
+{% else %}
+<h1 class="not-found">You Currently Don't Have Any Posts.</h1>
+{% endif %}
 {% endblock %}

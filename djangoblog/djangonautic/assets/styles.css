@@ -2,7 +2,6 @@ body{
     background-color: #0f121f;
     background-image: url(fern.jpg);
     background-repeat: no-repeat;
-    background-repeat-y: no-repeat;
     color: #fff;
 }
 
@@ -11,13 +10,37 @@ body *{
 }
 
 nav {
+    margin: 1% auto 0;
+    max-width: 80%;
+}
+
+.navbar-nav {
     justify-self: end;
+    flex-direction: row;
 }
 
 nav li {
-    margin-top: 12px;
-    display: inline-block;
+    margin-top: 24px;
     margin-left: 12px;
+}
+
+/* Search bar */
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+    border: 1px solid #00dba0;
+    box-shadow: 0 0 0 1px #00dba0;
+    background: none;
+    color: #fff;
+}
+
+.active-cyan-3 input[type=text] {
+    border: 1px solid #00dba0;
+    background: none;
+    color: #fff;
+    margin: 6% 0 0 12px;
+}
+
+.active-cyan-3 input[type=text]:hover {
+    box-shadow: 0 0 0 1.5px #00dba0;
 }
 
 h1, h2, h3, h4, h5{
@@ -59,11 +82,6 @@ div.wrapper h1 {
     font-size: 2.4em;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px 0;
-}
 .articles {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -79,6 +97,9 @@ header {
 
 .article img {
     max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .article h2 {
@@ -149,12 +170,12 @@ header {
     display: block;
 }
 
-.errorlist-delete {
+.errorlist-delete, .logout {
     /* Logout button in navbar*/
     border: 1px solid #ff5722;
     color:#ff5722;
     background: none;
-    margin: 0px 0;
+    margin: -7px 0;
     font-size: 0.9em;
     padding: 8px;
     border-radius: 7px;
@@ -258,23 +279,6 @@ header {
     padding: 9% 0 0 5%;
 }
 
-/* Search bar */
-.active-cyan-4 input[type=text]:focus:not([readonly]) {
-  border: 1px solid #00dba0;
-    box-shadow: 0 0 0 1px #00dba0;
-  background: none;
-  color: #fff;
-}
-.active-cyan-3 input[type=text] {
-  border: 1px solid #00dba0;
-  background: none;
-  color: #fff;
-}
-
-.active-cyan-3 input[type=text]:hover {
-    box-shadow: 0 0 0 1px #00dba0;
-}
-
 ::-webkit-input-placeholder { /* Edge */
   color: #fff;
 }
@@ -283,6 +287,16 @@ header {
   color: #fff;
 }
 
-::placeholder {
+form .form-control::-webkit-input-placeholder {
+  color: #fff;
+}
+
+form .form-control::-moz-placeholder {
+  color: #fff;
+}
+form .form-control:-ms-input-placeholder {
+  color: #fff;
+}
+form .form-control:placeholder {
   color: #fff;
 }
