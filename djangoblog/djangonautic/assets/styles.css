@@ -1,8 +1,12 @@
-body{
+body {
     background-color: #0f121f;
     background-image: url(fern.jpg);
     background-repeat: no-repeat;
     color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body *{
@@ -43,7 +47,7 @@ nav li {
     box-shadow: 0 0 0 1.5px #00dba0;
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
     font-weight: normal;
     margin: 0;
 }
@@ -86,6 +90,7 @@ div.wrapper h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .article {
