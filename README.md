@@ -27,6 +27,15 @@ After adding these features, I added Django REST APIs support as well as a searc
 - Searching for blogs through GET query parameters through the API
 - Search bar to the navbar
 
+To access APIs:
+For signing-up, send GET request to the following endpoint after running server with the following paramters and their
+values of your choice. NOTE that the params username, password, confirm_password should be written as is:
+End point: <localhost:port>/accounts/api/signup/
+Params:
+- username                  # Must not contain spaces
+- password
+- confirm_password
+
 
 You can compare the differences between the blog in the tutorial and my repo from the video titled Django Tutorial #1
 from time 1:41 onwards. Massive credits to The Net Ninja for making this tutorial:
